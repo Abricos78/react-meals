@@ -6,7 +6,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { routerMiddleware } from "connected-react-router";
 
-export const history = createBrowserHistory()
+export const history = createBrowserHistory({basename: '/react-meals'})
 const middlewares = [thunk, routerMiddleware(history)]
 
 export const store = createStore(
